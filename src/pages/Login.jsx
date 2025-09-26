@@ -38,7 +38,7 @@ const Login = () => {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-tr from-purple-50 to-pink-50 p-4">
+    <div className="absolute inset-0  flex items-center justify-center bg-gradient-to-tr from-purple-50 to-pink-50 p-4">
       <div className="bg-white shadow-2xl rounded-2xl w-full max-w-md p-10 flex flex-col gap-6 transform hover:scale-105 transition-transform duration-300">
         <h1 className="text-4xl font-extrabold text-center text-purple-700 mb-4 drop-shadow-md">Login</h1>
 

@@ -1,7 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import axios from "axios"
 
 const Header = ({user}) => {
+     const navigate = useNavigate();
       const handleLogout = async () => {
         try {
           await axios.post(
@@ -9,7 +11,6 @@ const Header = ({user}) => {
             {},
             { withCredentials: true }
           );
-          setUser(null);
           navigate("/");
         } catch (error) {
           console.error("Logout failed:", error);
