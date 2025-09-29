@@ -21,36 +21,66 @@ AI (ChatGPT) was used as a scaffolding and guidance tool to generate the initial
 - **All User Features** – Admins can also search and purchase sweets.
 
 ---
-
 ## AI Usage with ChatGPT
 
-ChatGPT was used in development for:
-- **Backend Skeleton** – Suggested Mongoose schemas, and initial file structure.
-- **Frontend Skeleton** – Suggested React component hierarchy, dashboard layout, and Tailwind-based styling.
-- **Code Examples** – Examples for forms, popups, axios API calls, and role-based rendering.
-- **Testing Guidance** – Suggestions for Jest and Supertest structures.
+During development, **ChatGPT (AI)** was used as a tool to accelerate the initial setup and design of the Sweet Shop Management System. It helped in the following ways:
 
-> **Note:** AI provided structural guidance and boilerplate.  
-> **All business logic, authentication, and database operations were implemented manually.**
+1. **Backend Skeleton Generation**
+   - ChatGPT provided the **initial structure** for the backend, including:
+     - Setting up Express routes for CRUD operations on sweets.
+     - Creating Mongoose schemas for the sweets and users.
+     - Structuring controller files with placeholder functions.
+   - This allowed me to focus on implementing the **actual logic** such as purchase handling, quantity validation, and authentication rather than boilerplate setup.
+
+2. **Frontend Skeleton Design**
+   - ChatGPT assisted in generating the **basic React component structure**, including:
+     - Dashboard layouts for both user and admin.
+     - SweetCard component to display sweets.
+     - Routing with React Router.
+     - Initial popup design for actions like purchase or restock.
+   - AI suggested **component hierarchy and styling** with Tailwind CSS, giving a clean starting point for the UI.
+
+3. **Code Examples & Guidance**
+   - ChatGPT provided examples of:
+     - Handling form inputs and popups.
+     - Making API calls with axios.
+     - Conditional rendering based on user roles (admin vs user).
+   - These examples were **adapted and customized** by me to implement project-specific logic, like securely handling JWT, validating purchase quantities, and updating the database.
+
+4. **Testing Assistance**
+   - ChatGPT suggested **test structures and approaches** using Jest:
+     - How to test React components (unit tests for SweetCard, popups).
+     - How to test backend routes using Supertest.
+     - How to implement **Red-Green-Refactor cycle** for TDD.
+   - I wrote all the actual test cases and logic myself, ensuring the tests fit my application.
+
+5. **Role of AI**
+   - ChatGPT acted as a **development assistant**, saving time on boilerplate code, best practices, and design patterns.
+   - **All functional logic, authentication, purchase/restock calculations, and integration with the database were implemented manually.**
+   - AI helped with **ideas, structure, and examples**, but the system’s business logic is my own work.
+
+**In summary:** AI with ChatGPT was used as a scaffolding and guidance tool to speed up development and ensure proper structure, but every functional feature, database interaction, and security measure was independently designed and implemented.  
+
 
 ---
 
-##  Authentication
+## Authentication
 
-- **JWT-based authentication** for both users and admins.
-- Tokens stored securely in cookies.
-- Role-based dashboards (`user` vs `admin`).
+- **JWT-based authentication** is used for both users and admins.
+- Tokens are securely stored in cookies with proper handling.
+- Different dashboards are rendered based on user role (`user` vs `admin`).
 
 ---
 
-##  Technology Stack
+## Technology Stack
 
-- **Frontend:** React.js, Tailwind CSS, React Router  
-- **Backend:** Node.js, Express.js  
-- **Database:** MongoDB  
-- **Authentication:** JWT, Cookies  
-- **Testing:** Jest  
+- **Frontend:** React.js, Tailwind CSS, React Router
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB
+- **Authentication:** JWT, Cookies
+- **Testing:** Jest
 
+---
 ---
 
 ##  Testing
@@ -85,8 +115,9 @@ Follow these steps to set up the project locally:
    git clone https://github.com/Aditya-kumar-sah/SweetCorner_Frontend.git
 2. cd SweetCorner_Frontend
 3. npm install
-4. npm run dev
-5. User Account
+4. add VITE_APP_BACKENDURL for backend url in your .env file which is kept in same directory where src folder is kept
+5. npm run dev
+6. User Account
    Email: user123@gmail.com,Password: user123
-5. Admin Account
+7. Admin Account
    Email: admin123@gmail.com,Password: admin123
